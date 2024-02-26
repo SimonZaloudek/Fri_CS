@@ -1,0 +1,14 @@
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\HadanieCisla.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\HadanieCisla.AssemblyInfoInputs.cache
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\HadanieCisla.AssemblyInfo.cs
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\HadanieCisla.csproj.CoreCompileInputs.cache
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\bin\Debug\net8.0\HadanieCisla.exe
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\bin\Debug\net8.0\HadanieCisla.deps.json
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\bin\Debug\net8.0\HadanieCisla.runtimeconfig.json
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\bin\Debug\net8.0\HadanieCisla.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\bin\Debug\net8.0\HadanieCisla.pdb
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\HadanieCisla.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\refint\HadanieCisla.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\HadanieCisla.pdb
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\HadanieCisla.genruntimeconfig.cache
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\ref\HadanieCisla.dll
