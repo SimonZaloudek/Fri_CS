@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HadanieCisla")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4660f0a02a16abfc626ba8ab85a25239728ed43f")]
 [assembly: System.Reflection.AssemblyProductAttribute("HadanieCisla")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HadanieCisla")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

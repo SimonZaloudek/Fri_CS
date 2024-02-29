@@ -12,3 +12,4 @@ C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\HadanieCisla.pdb
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\HadanieCisla.genruntimeconfig.cache
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\ref\HadanieCisla.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\HadanieCisla\obj\Debug\net8.0\HadanieCisla.sourcelink.json
