@@ -1,0 +1,16 @@
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\bin\Debug\net8.0\NumbersCv2.exe
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\bin\Debug\net8.0\NumbersCv2.deps.json
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\bin\Debug\net8.0\NumbersCv2.runtimeconfig.json
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\bin\Debug\net8.0\NumbersCv2.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\bin\Debug\net8.0\NumbersCv2.pdb
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\obj\Debug\net8.0\NumbersCv2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\obj\Debug\net8.0\NumbersCv2.AssemblyInfoInputs.cache
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\obj\Debug\net8.0\NumbersCv2.AssemblyInfo.cs
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\obj\Debug\net8.0\NumbersCv2.csproj.CoreCompileInputs.cache
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\obj\Debug\net8.0\NumbersCv2.sourcelink.json
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\obj\Debug\net8.0\NumbersCv2.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\obj\Debug\net8.0\refint\NumbersCv2.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\obj\Debug\net8.0\NumbersCv2.pdb
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\obj\Debug\net8.0\NumbersCv2.genruntimeconfig.cache
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\obj\Debug\net8.0\ref\NumbersCv2.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv2 numbers\NumbersCv2\NumbersCv2\bin\Debug\net8.0\numbers.txt
