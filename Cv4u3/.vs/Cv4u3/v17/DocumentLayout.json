@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\Cv4u3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5CD74B16-CB92-4096-981E-B9AA3CFA9657}|Cv4u3\\Cv4u3.csproj|c:\\users\\simon\\onedrive\\programy\\programovanie\\c#\\cv4u3\\cv4u3\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5CD74B16-CB92-4096-981E-B9AA3CFA9657}|Cv4u3\\Cv4u3.csproj|solutionrelative:cv4u3\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CD74B16-CB92-4096-981E-B9AA3CFA9657}|Cv4u3\\Cv4u3.csproj|c:\\users\\simon\\onedrive\\programy\\programovanie\\c#\\cv4u3\\cv4u3\\cv4u3.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5CD74B16-CB92-4096-981E-B9AA3CFA9657}|Cv4u3\\Cv4u3.csproj|solutionrelative:cv4u3\\cv4u3.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CD74B16-CB92-4096-981E-B9AA3CFA9657}|Cv4u3\\Cv4u3.csproj|c:\\users\\simon\\onedrive\\programy\\programovanie\\c#\\cv4u3\\cv4u3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CD74B16-CB92-4096-981E-B9AA3CFA9657}|Cv4u3\\Cv4u3.csproj|solutionrelative:cv4u3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\Cv4u3\\Cv4u3\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Cv4u3\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\Cv4u3\\Cv4u3\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Cv4u3\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-18T12:02:47.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cv4u3",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\Cv4u3\\Cv4u3\\Cv4u3.csproj",
+              "RelativeDocumentMoniker": "Cv4u3\\Cv4u3.csproj",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\Cv4u3\\Cv4u3\\Cv4u3.csproj",
+              "RelativeToolTip": "Cv4u3\\Cv4u3.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-18T12:02:01.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\Cv4u3\\Cv4u3\\Program.cs",
+              "RelativeDocumentMoniker": "Cv4u3\\Program.cs",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\Cv4u3\\Cv4u3\\Program.cs",
+              "RelativeToolTip": "Cv4u3\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T11:58:52.72Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Cv4": {
+      "commandName": "Project",
+      "commandLineArgs": "RudolfHuliak PeterHulak Lukas RoboFico"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TextTransformer.Classic": {
+      "commandName": "Project",
+      "commandLineArgs": "\"c++ je gay!\" --uppercase --add-spaces 3"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TextTransformer.CommandLine.DragonFruit": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Ahoj, toto je test\" --uppercase --add-spaces 3"
+    }
+  }
+}

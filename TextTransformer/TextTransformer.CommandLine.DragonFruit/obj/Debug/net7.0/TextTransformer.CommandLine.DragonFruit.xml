@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TextTransformer.CommandLine.DragonFruit</name>
+    </assembly>
+    <members>
+        <member name="M:Program.Main(System.String,System.Boolean,System.Int32)">
+            <summary>
+            Display text to output.
+            </summary>
+            <param name="argument">Input text.</param>
+            <param name="uppercase">Change the letters to uppercase.</param>
+            <param name="addSpaces">Add spaces between words.</param>
+        </member>
+    </members>
+</doc>

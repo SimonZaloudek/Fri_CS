@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Dc93xpQU2y9/MAPu+rNwEqnqKNR52vygSQxrd16AzKdy4iSkwCOnPsIhRZKXfLLVVGDmR3+ja2UJLWnrNbCMgg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\TextTransformer\\TextTransformer.Classic\\TextTransformer.Classic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\simon\\.nuget\\packages\\figgle\\0.5.1\\figgle.0.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}

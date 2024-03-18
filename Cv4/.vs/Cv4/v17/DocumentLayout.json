@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\Cv4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{28FF2F94-1770-4B76-A856-B3DD6D1161D9}|Cv4\\Cv4.csproj|c:\\users\\simon\\onedrive\\programy\\programovanie\\c#\\cv4\\cv4\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{28FF2F94-1770-4B76-A856-B3DD6D1161D9}|Cv4\\Cv4.csproj|solutionrelative:cv4\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28FF2F94-1770-4B76-A856-B3DD6D1161D9}|Cv4\\Cv4.csproj|c:\\users\\simon\\onedrive\\programy\\programovanie\\c#\\cv4\\cv4\\cv4.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{28FF2F94-1770-4B76-A856-B3DD6D1161D9}|Cv4\\Cv4.csproj|solutionrelative:cv4\\cv4.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\Cv4\\Cv4\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Cv4\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\Cv4\\Cv4\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Cv4\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-18T11:14:54.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cv4",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\Cv4\\Cv4\\Cv4.csproj",
+              "RelativeDocumentMoniker": "Cv4\\Cv4.csproj",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\Cv4\\Cv4\\Cv4.csproj",
+              "RelativeToolTip": "Cv4\\Cv4.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-18T11:14:05.865Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

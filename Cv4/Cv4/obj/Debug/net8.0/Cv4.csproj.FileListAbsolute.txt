@@ -1,0 +1,15 @@
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\obj\Debug\net8.0\Cv4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\obj\Debug\net8.0\Cv4.AssemblyInfoInputs.cache
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\obj\Debug\net8.0\Cv4.AssemblyInfo.cs
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\obj\Debug\net8.0\Cv4.csproj.CoreCompileInputs.cache
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\obj\Debug\net8.0\Cv4.sourcelink.json
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\bin\Debug\net8.0\Cv4.exe
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\bin\Debug\net8.0\Cv4.deps.json
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\bin\Debug\net8.0\Cv4.runtimeconfig.json
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\bin\Debug\net8.0\Cv4.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\bin\Debug\net8.0\Cv4.pdb
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\obj\Debug\net8.0\Cv4.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\obj\Debug\net8.0\refint\Cv4.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\obj\Debug\net8.0\Cv4.pdb
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\obj\Debug\net8.0\Cv4.genruntimeconfig.cache
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\Cv4\Cv4\obj\Debug\net8.0\ref\Cv4.dll

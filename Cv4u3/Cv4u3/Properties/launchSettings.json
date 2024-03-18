@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Cv4u3": {
+      "commandName": "Project",
+      "commandLineArgs": "Code.txt Hajnikovazena.txt"
+    }
+  }
+}
