@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\CV5 (cv4)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{14CD2C64-8B0F-413D-BD4A-C7CD970940CE}|CV5 (cv4)\\CV5 (cv4).csproj|c:\\users\\simon\\onedrive\\programy\\programovanie\\c#\\cv5 (cv4)\\cv5 (cv4)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14CD2C64-8B0F-413D-BD4A-C7CD970940CE}|CV5 (cv4)\\CV5 (cv4).csproj|solutionrelative:cv5 (cv4)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14CD2C64-8B0F-413D-BD4A-C7CD970940CE}|CV5 (cv4)\\CV5 (cv4).csproj|c:\\users\\simon\\onedrive\\programy\\programovanie\\c#\\cv5 (cv4)\\cv5 (cv4)\\persondatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14CD2C64-8B0F-413D-BD4A-C7CD970940CE}|CV5 (cv4)\\CV5 (cv4).csproj|solutionrelative:cv5 (cv4)\\persondatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14CD2C64-8B0F-413D-BD4A-C7CD970940CE}|CV5 (cv4)\\CV5 (cv4).csproj|c:\\users\\simon\\onedrive\\programy\\programovanie\\c#\\cv5 (cv4)\\cv5 (cv4)\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14CD2C64-8B0F-413D-BD4A-C7CD970940CE}|CV5 (cv4)\\CV5 (cv4).csproj|solutionrelative:cv5 (cv4)\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\CV5 (cv4)\\CV5 (cv4)\\Program.cs",
+              "RelativeDocumentMoniker": "CV5 (cv4)\\Program.cs",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\CV5 (cv4)\\CV5 (cv4)\\Program.cs",
+              "RelativeToolTip": "CV5 (cv4)\\Program.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T11:53:28.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PersonDatabase.cs",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\CV5 (cv4)\\CV5 (cv4)\\PersonDatabase.cs",
+              "RelativeDocumentMoniker": "CV5 (cv4)\\PersonDatabase.cs",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\CV5 (cv4)\\CV5 (cv4)\\PersonDatabase.cs",
+              "RelativeToolTip": "CV5 (cv4)\\PersonDatabase.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAkwCMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T11:17:42.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\CV5 (cv4)\\CV5 (cv4)\\Person.cs",
+              "RelativeDocumentMoniker": "CV5 (cv4)\\Person.cs",
+              "ToolTip": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\CV5 (cv4)\\CV5 (cv4)\\Person.cs",
+              "RelativeToolTip": "CV5 (cv4)\\Person.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAowCcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T11:15:50.286Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
