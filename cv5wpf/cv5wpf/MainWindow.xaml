@@ -6,13 +6,14 @@
         xmlns:local="clr-namespace:cv5wpf"
         mc:Ignorable="d"
         Title="MyFirstWPF" Height="450" Width="800">
-    <Canvas>
-        <Button Content="Show Hello" Canvas.Left="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.rawpixel.com%2Fsearch%2Fsmiley%2520emoji%2520png&psig=AOvVaw2vMRYQ-EzJUv7WTAoGqGQT&ust=1712436999975000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNDu-_v6q4UDFQAAAAAdAAAAABAE" x:Name="button1" Height="60" Width="150" Canvas.Left="325" Canvas.Top="187" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button1_Click" FontSize="20" BorderThickness="3,3,3,3">
+    <Grid>
+        <Button x:Name="button1" Click="button1_Click" BorderThickness="3,3,3,3" Height="70" Width="150" HorizontalAlignment="Center" VerticalAlignment="Top" MinWidth="150" MinHeight="70" Margin="0,42,0,0">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-
-
+            <TextBlock x:Name="tb1" FontSize="20" FontStyle="Oblique"><Run Text="Show Hello "/><InlineUIContainer>
+                    <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/640px-Heart_coraz%C3%B3n.svg.png" Height="36" Width="33"/>
+                </InlineUIContainer></TextBlock>
         </Button>
-    </Canvas>
+    </Grid>
 </Window>
