@@ -25,5 +25,14 @@ namespace cv5wpf
         {
             MessageBox.Show(this, "Hello World!", "HelloWorld");
         }
+
+        private void backgroundChange_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show(this, "Change Background?", "BackgroundChange", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Background = Brushes.DarkBlue;
+            }
+        }
     }
 }
