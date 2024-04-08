@@ -1,0 +1,14 @@
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\bin\Debug\net7.0\AdressBook.CommonLibrary.deps.json
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\bin\Debug\net7.0\AdressBook.CommonLibrary.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\bin\Debug\net7.0\AdressBook.CommonLibrary.pdb
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\obj\Debug\net7.0\AdressBook.CommonLibrary.csproj.AssemblyReference.cache
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\obj\Debug\net7.0\AdressBook.CommonLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\obj\Debug\net7.0\AdressBook.CommonLibrary.AssemblyInfoInputs.cache
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\obj\Debug\net7.0\AdressBook.CommonLibrary.AssemblyInfo.cs
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\obj\Debug\net7.0\AdressBook.CommonLibrary.csproj.CoreCompileInputs.cache
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\obj\Debug\net7.0\AdressBook.CommonLibrary.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\obj\Debug\net7.0\refint\AdressBook.CommonLibrary.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\obj\Debug\net7.0\AdressBook.CommonLibrary.pdb
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\obj\Debug\net7.0\ref\AdressBook.CommonLibrary.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\bin\Debug\net7.0\employees.json
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\AdressBook.CommonLibrary\bin\Debug\net7.0\emps.csv
