@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BigLib</name>
+    </assembly>
+    <members>
+        <member name="T:BigLib.Person">
+            <summary>
+            Trieda reprezentujúca základné údaje o osobe.
+            </summary>
+        </member>
+        <member name="P:BigLib.Person.FirstName">
+            <summary>
+            Meno.
+            </summary>
+        </member>
+        <member name="P:BigLib.Person.LastName">
+            <summary>
+            Priezvisko.
+            </summary>
+        </member>
+        <member name="P:BigLib.Person.FullName">
+            <summary>
+            Plné meno zložené z <see cref="P:BigLib.Person.FirstName"/> a <see cref="P:BigLib.Person.LastName"/>.
+            </summary>
+        </member>
+        <member name="P:BigLib.Person.Birthdate">
+            <summary>
+            Dátum narodenia.
+            </summary>
+        </member>
+        <member name="P:BigLib.Person.Age">
+            <summary>
+            Vek vypočítavaný z <see cref="P:BigLib.Person.Birthdate"/> a aktuálneho času.
+            </summary>
+        </member>
+        <member name="M:BigLib.Person.#ctor">
+            <summary>
+            Vytvorí prázdny objekt typu <see cref="T:BigLib.Person"/>.
+            </summary>
+        </member>
+        <member name="M:BigLib.Person.#ctor(System.String,System.String,System.DateTime)">
+            <summary>
+            Vytvorí objekt typu <see cref="T:BigLib.Person"/> podľa zadaných parametrov.
+            </summary>
+            <param name="firstName">Meno.</param>
+            <param name="lastName">Priezvisko.</param>
+            <param name="birthdate">Dátum narodenia.</param>
+        </member>
+        <member name="M:BigLib.Person.ToString">
+            <summary>
+            Vráti reťazec zložený z <see cref="P:BigLib.Person.FullName"/> a <see cref="P:BigLib.Person.Age"/>. 
+            </summary>
+            <returns>Reťazec reprezentujúci objekt.</returns>
+        </member>
+        <member name="M:BigLib.Person.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BigLib.Person.Equals(BigLib.Person)">
+            <summary>
+            Porovná s objektom typu <see cref="T:BigLib.Person"/> a vráti hodnotu, či sa objekty rovnajú v hodnotách.
+            </summary>
+            <param name="other">Objekt osoby pre porovnanie.</param>
+            <returns>Vráti true, ak sa objekty rovnajú. Inak vráti false.</returns>
+        </member>
+        <member name="M:BigLib.Person.GetHashCode">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

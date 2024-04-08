@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BigLib;
 
 namespace cv5wpf
 {
@@ -33,6 +34,13 @@ namespace cv5wpf
             {
                 this.Background = Brushes.DarkBlue;
             }
+        }
+
+        private void listAdd_Click(object sender, RoutedEventArgs e)
+        {
+            
+            var pw = new PersonWindow(this);
+            pw.Show();
         }
     }
 }

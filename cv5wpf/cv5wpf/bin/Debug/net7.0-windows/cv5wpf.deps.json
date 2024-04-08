@@ -7,8 +7,19 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "cv5wpf/1.0.0": {
+        "dependencies": {
+          "BigLib": "1.0.0.0"
+        },
         "runtime": {
           "cv5wpf.dll": {}
+        }
+      },
+      "BigLib/1.0.0.0": {
+        "runtime": {
+          "BigLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -16,6 +27,11 @@
   "libraries": {
     "cv5wpf/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BigLib/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

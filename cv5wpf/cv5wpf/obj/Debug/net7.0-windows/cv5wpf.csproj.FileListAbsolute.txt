@@ -3,7 +3,6 @@ C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\bin\Debug\net7.0
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\bin\Debug\net7.0-windows\cv5wpf.runtimeconfig.json
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\bin\Debug\net7.0-windows\cv5wpf.dll
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\bin\Debug\net7.0-windows\cv5wpf.pdb
-C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\obj\Debug\net7.0-windows\cv5wpf.csproj.AssemblyReference.cache
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\obj\Debug\net7.0-windows\MainWindow.g.cs
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\obj\Debug\net7.0-windows\cv5wpf_MarkupCompile.cache
@@ -19,3 +18,10 @@ C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\obj\Debug\net7.0
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\obj\Debug\net7.0-windows\cv5wpf.pdb
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\obj\Debug\net7.0-windows\cv5wpf.genruntimeconfig.cache
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\obj\Debug\net7.0-windows\ref\cv5wpf.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\obj\Debug\net7.0-windows\cv5wpf.sourcelink.json
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\obj\Debug\net7.0-windows\cv5wpf.csproj.AssemblyReference.cache
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\obj\Debug\net7.0-windows\PersonWindow.g.cs
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\bin\Debug\net7.0-windows\BigLib.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\bin\Debug\net7.0-windows\BigLib.xml
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\obj\Debug\net7.0-windows\PersonWindow.baml
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\cv5wpf\cv5wpf\obj\Debug\net7.0-windows\cv5wpf.csproj.Up2Date

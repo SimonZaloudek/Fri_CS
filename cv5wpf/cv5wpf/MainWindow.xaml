@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MyFirstWPF" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="34"/>
+            <RowDefinition Height="Auto" MinHeight="34"/>
+            <RowDefinition Height="Auto" MinHeight="34"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Button x:Name="button1" Click="button1_Click" BorderThickness="5,5,5,5" Height="70" Width="150" HorizontalAlignment="Center" VerticalAlignment="Top" MinWidth="150" MinHeight="70" Margin="0,42,0,0">
             <Button.Effect>
                 <DropShadowEffect/>
@@ -21,6 +31,11 @@
             </Button.Effect>
             <TextBlock x:Name="tb2" FontSize="20"><Run Text="Change background"/>
             </TextBlock>
+        </Button>
+        <ListBox Name="lb1" Margin="0,273,148,0">
+            
+        </ListBox>
+        <Button x:Name="listAdd" Content="Add..." MinHeight="50" MinWidth="100" FontSize="20" Margin="673,273,27,111" Click="listAdd_Click">
         </Button>
     </Grid>
 </Window>

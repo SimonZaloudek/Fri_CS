@@ -8,4 +8,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="BigLib">
+      <HintPath>dllLib\BigLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
