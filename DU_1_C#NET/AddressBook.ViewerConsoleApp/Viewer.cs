@@ -1,18 +1,23 @@
 ﻿using AdressBook.CommonLibrary;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 public class Viewer 
 {
-    readonly string[] commands = { "input", "name", "position", "main-workplace", "output", "exit" };
+    readonly string[] commandList = { "input", "name", "position", "main-workplace", "output", "exit" };
     private SearchResult searchResult;
-    private EmployeeList empList;
+    private EmployeeList? empList = new();
+    private string? name = null;
+    private string? position = null;
+    private string? mainWorkplace = null;
+    private string? csvPath = null;
 
     public Viewer()
     {
         while (true)
-        {
+        { 
             Console.WriteLine("Welcome to FRI employee database...");
-            foreach (string com in commands) 
+            foreach (string com in commandList) 
             {
                 Console.Write("--" + com + ", ");
             }
@@ -20,34 +25,52 @@ public class Viewer
 
             Console.Write("Enter command: ");
             string? input = Console.ReadLine();
-            if (input == "--exit") 
+            if (input == "--exit" || input == null || input == "") 
             {
                 break;
             }
 
+            int startQot = 0;
+            int endQot = 0;
 
-            string[] words = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-
-            // Process the commands (every odd-indexed word)
-            for (int i = 0; i < words.Length; i += 2)
+            if (input.Contains("\""))
             {
-                string? command = words[i];
-                string parameter = (i + 1 < words.Length) ? words[i + 1] : null;
-
-                // Remove quotes if present
-                if (!string.IsNullOrEmpty(parameter) && parameter.StartsWith("\"") && parameter.EndsWith("\""))
+                for (int i = 0; i < input.Length; i++)
                 {
-                    parameter = parameter.Substring(1, parameter.Length - 2);
+                    if (input[i] == '\"' && startQot == 0)
+                    {
+                        startQot = i + 1;
+                    }
+                    if (input[i] == '\"' && startQot != i)
+                    {
+                        endQot = i;
+                    }
                 }
-
-                Execute(command, parameter);
+                mainWorkplace = input.Substring(startQot, endQot - startQot);
+                input = input.Remove(startQot, endQot - startQot + 1);
             }
-            Console.WriteLine();
-        }
 
+            string[] inputSplit = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            if (inputSplit.Length % 2 != 0 || !inputSplit[inputSplit.Length % 2].StartsWith("--")) 
+            {
+                Console.WriteLine("Invalid command format! Please write \"--command parameter\"");
+                continue;
+            }
+            for (int i = 0; i < inputSplit.Length; i += 2) 
+            {
+                Execute(inputSplit[i], inputSplit[i + 1]);
+            }
+            searchResult = empList.Search(mainWorkplace, position, name);
+            searchResult.WriteToConsole();
+            if (csvPath != null) 
+            {
+                searchResult.SaveToCsv(new FileInfo(csvPath));
+            }
+            mainWorkplace = null;
+        }
     }
 
-    static void Execute(string command, string? parameter)
+    private void Execute(string command, string? parameter)
     {
         switch (command)
         {
@@ -55,16 +78,15 @@ public class Viewer
                 empList = empList.LoadFromJson(new FileInfo(parameter));
                 break;
             case "--name":
-                Console.WriteLine(parameter);
+                name = parameter;
                 break;
             case "--position":
-                Console.WriteLine(parameter);
+                position = parameter;
                 break;
             case "--main-workplace":
-                Console.WriteLine(parameter);
                 break;
             case "--output":
-                Console.WriteLine(parameter);
+                csvPath = parameter;
                 break;
             default:
                 Console.WriteLine("Unknown command: " + command);

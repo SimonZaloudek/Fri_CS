@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cv5wpf")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc86ea23cfa6ca38fefe7bc5be1e45e740d5cd64")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("cv5wpf")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cv5wpf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

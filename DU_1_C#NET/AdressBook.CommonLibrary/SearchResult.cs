@@ -45,6 +45,7 @@ public class SearchResult
 
     public void WriteToConsole() 
     {
+        Console.WriteLine();
         int index = 1;
         string text = "";
         foreach (var employee in Employees)
@@ -59,5 +60,6 @@ public class SearchResult
             index++;
         }
         Console.WriteLine(text);
+        Console.WriteLine();
     }
 }

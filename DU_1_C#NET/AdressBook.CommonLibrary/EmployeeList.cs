@@ -71,28 +71,20 @@ public class EmployeeList : ObservableCollection<Employee>
 
         foreach (Employee emp in this)
         {
-            if (emp.MainWorkplace != null && mainWorkplace != null)
-            {
-                if (emp.MainWorkplace.IndexOf(mainWorkplace, comparison) >= 0)
-                {
-                    employees.Add(emp);
-                }
-            }
+            bool matchesMainWorkplace = false;
+            bool matchesPosition = false;
+            bool matchesName = false;
 
-            if (emp.Position != null && position != null)
-            {
-                if (emp.Position.IndexOf(position, comparison) >= 0 && !employees.Contains(emp))
-                {
-                    employees.Add(emp);
-                }
-            }
+            if (mainWorkplace == null || (emp.MainWorkplace != null && emp.MainWorkplace.IndexOf(mainWorkplace, comparison) >= 0))
+                matchesMainWorkplace = true;
+            if (position == null || (emp.Position != null && emp.Position.IndexOf(position, comparison) >= 0))
+                matchesPosition = true;
+            if (name == null || (emp.Name != null && emp.Name.IndexOf(name, comparison) >= 0))
+                matchesName = true;
 
-            if (emp.Name != null && name != null)
+            if (matchesMainWorkplace && matchesPosition && matchesName)
             {
-                if (emp.Name.IndexOf(name, comparison) >= 0 && !employees.Contains(emp))
-                {
-                    employees.Add(emp);
-                }
+                employees.Add(emp);
             }
         }
 
