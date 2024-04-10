@@ -42,7 +42,8 @@ namespace ViewerWpfApp
                 path = fileDialog.SafeFileName;
                 fileName = fileDialog.FileName;
 
-                _employeeList = _employeeList.LoadFromJson(new FileInfo(path));
+                if (_employeeList != null)
+                    _employeeList = _employeeList.LoadFromJson(new FileInfo(path));
                 sourceLoaded = true;
                 sourceFileLoaded();
             }
@@ -50,10 +51,11 @@ namespace ViewerWpfApp
 
         private void sourceFileLoaded() 
         {
-            foreach (string function in _employeeList.GetPositions()) 
-            {
-                FunctionsCB.Items.Add(function);
-            }
+            if (_employeeList != null)
+                foreach (string function in _employeeList.GetPositions()) 
+                {
+                    FunctionsCB.Items.Add(function);
+                }
 
             foreach (string workplace in _employeeList.GetMainWorkplaces()) 
             {
@@ -63,17 +65,33 @@ namespace ViewerWpfApp
 
         private void employeeSearch_Click(object sender, RoutedEventArgs e)
         {
-            if (sourceLoaded == false)
+            if (sourceLoaded == false) 
             {
-                employeeList.Text = "No source file loaded..";
-            }
+                MessageBoxResult result;
+                result = MessageBox.Show(this, "No source file loaded..", "Error..", MessageBoxButton.OK);
+            } 
             else 
             {
-                _searchResult = _employeeList.Search(mainWorkplace: WorkplaceCB.SelectedValue.ToString(), position: FunctionsCB.SelectedValue.ToString(), null);
-                foreach (Employee emp in _searchResult.Employees) 
+                string? workplace = null;
+                string? position = null;
+
+                if (WorkplaceCB.SelectedValue != null) 
                 {
-                    employeeList.Text += emp.Name + "\n";
-                } 
+                    workplace = WorkplaceCB.SelectedValue.ToString();
+                }
+                if (FunctionsCB.SelectedValue != null)
+                {
+                    position = FunctionsCB.SelectedValue.ToString();
+                }
+                
+                if (_employeeList != null)
+                    _searchResult = _employeeList.Search(mainWorkplace: workplace, position: position, NameTextBox.Text);
+
+                if (_searchResult != null)
+                    empListView.ItemsSource = _searchResult.Employees;
+
+                if (_searchResult != null)
+                    empFound.Text = "Employees found: " + _searchResult.Employees.Count();
             }
         }
 
@@ -82,5 +100,32 @@ namespace ViewerWpfApp
             new MainWindow().Show();
             this.Close();
         }
+
+        private void exportCSV_Click(object sender, RoutedEventArgs e)
+        {
+            if (sourceLoaded == false)
+            {
+                MessageBoxResult result;
+                result = MessageBox.Show(this, "No source file loaded..", "Error..", MessageBoxButton.OK);
+            }
+            else
+            {
+                SaveFileDialog saveDialog = new SaveFileDialog();
+                saveDialog.Title = "Save to CSV:";
+                saveDialog.Filter = ".csv files | *.csv";
+
+                saveDialog.FileName = "Document";
+                saveDialog.DefaultExt = ".csv";
+
+                bool? result = saveDialog.ShowDialog();
+                if (result == true)
+                {
+                    if (_searchResult != null)
+                        _searchResult.SaveToCsv(new FileInfo(saveDialog.FileName));
+                }
+            }
+        }
+       
+            
     }
 }
