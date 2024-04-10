@@ -19,3 +19,8 @@ C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\ViewerWpfApp\obj\De
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\ViewerWpfApp\obj\Debug\net7.0-windows\ViewerWpfApp.pdb
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\ViewerWpfApp\obj\Debug\net7.0-windows\ViewerWpfApp.genruntimeconfig.cache
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\ViewerWpfApp\obj\Debug\net7.0-windows\ref\ViewerWpfApp.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\ViewerWpfApp\bin\Debug\net7.0-windows\employees.json
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\ViewerWpfApp\bin\Debug\net7.0-windows\emps.csv
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\ViewerWpfApp\bin\Debug\net7.0-windows\AdressBook.CommonLibrary.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\ViewerWpfApp\bin\Debug\net7.0-windows\AdressBook.CommonLibrary.pdb
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\ViewerWpfApp\obj\Debug\net7.0-windows\ViewerWpfApp.csproj.CopyComplete

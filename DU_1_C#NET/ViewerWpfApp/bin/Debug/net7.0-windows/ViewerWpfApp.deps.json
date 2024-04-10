@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "ViewerWpfApp/1.0.0": {
+        "dependencies": {
+          "AdressBook.CommonLibrary": "1.0.0"
+        },
         "runtime": {
           "ViewerWpfApp.dll": {}
+        }
+      },
+      "AdressBook.CommonLibrary/1.0.0": {
+        "runtime": {
+          "AdressBook.CommonLibrary.dll": {}
         }
       }
     }
   },
   "libraries": {
     "ViewerWpfApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AdressBook.CommonLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

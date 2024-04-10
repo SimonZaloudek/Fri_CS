@@ -47,19 +47,14 @@ public class EmployeeList : ObservableCollection<Employee>
     {
         List<string> mainWorkplaces = new List<string>();
 
-        using (var enumerator = GetEnumerator())         
+        foreach(Employee employee in this) 
         {
-            while (enumerator.MoveNext()) 
+            if (!mainWorkplaces.Contains(employee.MainWorkplace)) 
             {
-                Employee employee = enumerator.Current;
-                if(employee != null && employee.MainWorkplace != null)
-                if (mainWorkplaces.Contains(employee.MainWorkplace)) 
-                {
-                    mainWorkplaces.Add(employee.MainWorkplace);
-                }
+                mainWorkplaces.Add(employee.MainWorkplace);
             }
-        
         }
+        
         mainWorkplaces.Sort();
         return mainWorkplaces;
     }

@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0-windows7.0": {}
+    "net7.0-windows7.0": {
+      "AdressBook.CommonLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/AdressBook.CommonLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AdressBook.CommonLibrary.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "AdressBook.CommonLibrary/1.0.0": {
+      "type": "project",
+      "path": "../AdressBook.CommonLibrary/AdressBook.CommonLibrary.csproj",
+      "msbuildProject": "../AdressBook.CommonLibrary/AdressBook.CommonLibrary.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0-windows7.0": []
+    "net7.0-windows7.0": [
+      "AdressBook.CommonLibrary >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\simon\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\DU_1_C#NET\\AdressBook.CommonLibrary\\AdressBook.CommonLibrary.csproj": {
+              "projectPath": "C:\\Users\\simon\\OneDrive\\Programy\\Programovanie\\C#\\DU_1_C#NET\\AdressBook.CommonLibrary\\AdressBook.CommonLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
