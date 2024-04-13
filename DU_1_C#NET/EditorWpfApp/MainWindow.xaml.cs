@@ -1,24 +1,28 @@
-﻿using System.Text;
+﻿using AdressBook.CommonLibrary;
+using Microsoft.Win32;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace EditorWpfApp
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer timer = new DispatcherTimer();
+        private string path;
+        private string fileName;
+        private bool sourceLoaded = false;
+        private bool wasChanged = false;
+        private EmployeeList? _employeeList = new();
+        private SearchResult? _searchResult;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            timer.Tick += new EventHandler(Timer_Tick);
+            timer.Start();
+
             editButton.IsEnabled = false;
             deleteButton.IsEnabled = false;
             searchButton.IsEnabled = false;
@@ -26,58 +30,133 @@ namespace EditorWpfApp
             deleteMenuButton.IsEnabled = false;
         }
 
-        private void addButton_Click(object sender, RoutedEventArgs e)
+        private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            addButton.IsEnabled = false;
+            //Casova nestihacka :(
+            //Ale spravil by som novy DialogWindow
         }
 
-        private void editButton_Click(object sender, RoutedEventArgs e)
+        private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            //Casova nestihacka :(
         }
 
-        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            editButton.IsEnabled = false;
+            wasChanged = true;
+
+            List<Employee> itemsToRemove = new List<Employee>();
+            MessageBoxResult result;
+            result = MessageBox.Show(this, "Are you sure you want to remove selected employees?..", "Remove employees..", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                foreach (Employee emp in empListView.SelectedItems)
+                {
+                    itemsToRemove.Add(emp);
+                }
+                //Priamo mazat neslo, preto takyto blby "obchvat" xd
+                foreach (Employee emp in itemsToRemove)
+                {
+                    _employeeList.Remove(emp);
+                }
+                empListView.ItemsSource = null;
+                empListView.ItemsSource = _employeeList;
+            }
         }
 
-        private void newMenuClick(object sender, RoutedEventArgs e)
+        private void NewMenuClick(object sender, RoutedEventArgs e)
         {
+            //vidim moznost zlepsenia v tejto "spagety metode" ale nestiham casovo
+            if (wasChanged == false)
+            {
+                new MainWindow().Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBoxResult result;
+                result = MessageBox.Show(this, "Database was modified, do you want to save it?..", "Database modified..", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    SaveMenuClick(null, null);
 
+                } 
+                new MainWindow().Show();
+                this.Close();
+            }
         }
 
-        private void openMenuClick(object sender, RoutedEventArgs e) 
+        private void OpenMenuClick(object sender, RoutedEventArgs e)
         {
-        
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Title = "Select a .json file";
+            fileDialog.Filter = ".json files | *.json";
+            bool? opened = fileDialog.ShowDialog();
+            if (opened == true)
+            {
+                path = fileDialog.SafeFileName;
+                fileName = fileDialog.FileName;
+
+                if (_employeeList != null)
+                    _employeeList = _employeeList.LoadFromJson(new FileInfo(path));
+                sourceLoaded = true;
+                empListView.ItemsSource = _employeeList;
+
+                searchButton.IsEnabled = true;
+            }
         }
 
-        private void saveMenuClick(object sender, RoutedEventArgs e)
+        private void SaveMenuClick(object sender, RoutedEventArgs e)
         {
+            if (sourceLoaded == false)
+            {
+                MessageBoxResult result;
+                result = MessageBox.Show(this, "No source file loaded..", "Error..", MessageBoxButton.OK);
+            }
+            else
+            {
+                SaveFileDialog saveDialog = new SaveFileDialog();
+                saveDialog.Title = "Save to CSV:";
+                saveDialog.Filter = ".csv files | *.csv";
 
+                saveDialog.FileName = "Document";
+                saveDialog.DefaultExt = ".csv";
+
+                bool? result = saveDialog.ShowDialog();
+                if (result == true)
+                {
+                    if (_searchResult != null)
+                        _searchResult.SaveToCsv(new FileInfo(saveDialog.FileName));
+                }
+            }
         }
 
-        private void exitMenuClick(object sender, RoutedEventArgs e)
+        private void ExitMenuClick(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
-        private void helpMenuClick(object sender, RoutedEventArgs e)
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-
+            new searchWindow(_employeeList);
+            this.Close();
         }
 
-        private void fileMenuClick(object sender, RoutedEventArgs e)
+        private void AboutMenuClick(object sender, RoutedEventArgs e)
         {
-
-        }
-        private void deleteButtonClick(object sender, RoutedEventArgs e)
-        {
-
+            new AboutDialog().Show();
         }
 
-        private void searchButton_Click(object sender, RoutedEventArgs e)
+        private void Timer_Tick(object sender, EventArgs e) 
         {
-
+            if (empListView.SelectedItems.Count > 0)
+            {
+                deleteButton.IsEnabled = true;
+                editButton.IsEnabled = true;
+                editMenuButton.IsEnabled = true;
+                deleteMenuButton.IsEnabled = true;
+            }
+            totalEmployeesText.Text = "Total employees: " + empListView.Items.Count;
         }
     }
-}
+}  

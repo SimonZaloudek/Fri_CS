@@ -15,9 +15,7 @@ using System.Windows.Shapes;
 
 namespace ViewerWpfApp
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+   
     public partial class MainWindow : Window
     {
         private string path;

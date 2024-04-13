@@ -19,3 +19,11 @@ C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\De
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\Debug\net7.0-windows\EditorWpfApp.pdb
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\Debug\net7.0-windows\EditorWpfApp.genruntimeconfig.cache
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\Debug\net7.0-windows\ref\EditorWpfApp.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\bin\Debug\net7.0-windows\employees.json
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\bin\Debug\net7.0-windows\AdressBook.CommonLibrary.dll
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\bin\Debug\net7.0-windows\AdressBook.CommonLibrary.pdb
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\Debug\net7.0-windows\EditorWpfApp.csproj.CopyComplete
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\Debug\net7.0-windows\searchWindow.g.cs
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\Debug\net7.0-windows\searchWindow.baml
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\Debug\net7.0-windows\AboutDialog.baml
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\Debug\net7.0-windows\AboutDialog.g.cs

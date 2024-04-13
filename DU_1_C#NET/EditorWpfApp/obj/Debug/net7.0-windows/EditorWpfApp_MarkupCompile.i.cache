@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\App.xaml
-11407045341
+4-1804372391
 
-6-1496297110
-1981871740104
-MainWindow.xaml;
+9-671553538
+1991187203902
+AboutDialog.xaml;DialogAddEdit.xaml;MainWindow.xaml;SearchWindow.xaml;
 
-False
+True
 
