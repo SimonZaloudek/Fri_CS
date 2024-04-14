@@ -5,8 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EditorWpfApp"
         mc:Ignorable="d"
-        Title="DialogAddEdit" Height="450" Width="800">
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Title="DialogAddEdit" Height="400" Width="300">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Employee: " HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+        <TextBlock Grid.Row="1"  Text="Position: " HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+        <TextBlock Grid.Row="2"  Text="Phone: " HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+        <TextBlock Grid.Row="3"  Text="E-Mail: " HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+        <TextBlock Grid.Row="4"  Text="Room: " HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+        <TextBlock Grid.Row="5"  Text="Main workplace: " HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+        <TextBlock Grid.Row="6"  Text="Workplace: " HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+
+        <TextBox x:Name="empTB" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="100,0,10,0" Width="170" />
+        <TextBox x:Name="posTB" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="100,0,10,0" Width="170" />
+        <TextBox x:Name="phoneTB" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="100,0,10,0" Width="170" />
+        <TextBox x:Name="mailTB" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="100,0,10,0" Width="170" />
+        <TextBox x:Name="roomTB" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="100,0 10,0" Width="170" />
+        <TextBox x:Name="mainWTB" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="81,0,10,0" Width="170" />
+        <TextBox x:Name="workTB" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="81,0,10,0" Width="170" />
+
+        <Button Grid.Row="7"  Content="OK" Margin="116,11,100,12" Click="okButtonClick"></Button>
+        <Button Grid.Row="7"  Content="CANCEL" Margin="205,11,10,12" Click="cancelButtonClick"/>
     </Grid>
 </Window>

@@ -16,6 +16,8 @@ namespace EditorWpfApp
         private EmployeeList? _employeeList = new();
         private SearchResult? _searchResult;
 
+        public EmployeeList? EmployeeList { get => _employeeList; set => _employeeList = value; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -32,13 +34,12 @@ namespace EditorWpfApp
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            //Casova nestihacka :(
-            //Ale spravil by som novy DialogWindow
+            new DialogAddEdit(mw: this).Show();
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-            //Casova nestihacka :(
+            new DialogAddEdit(this, (Employee)empListView.SelectedItem).Show();
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
@@ -66,24 +67,17 @@ namespace EditorWpfApp
 
         private void NewMenuClick(object sender, RoutedEventArgs e)
         {
-            //vidim moznost zlepsenia v tejto "spagety metode" ale nestiham casovo
-            if (wasChanged == false)
-            {
-                new MainWindow().Show();
-                this.Close();
-            }
-            else
+            if (wasChanged == true)
             {
                 MessageBoxResult result;
                 result = MessageBox.Show(this, "Database was modified, do you want to save it?..", "Database modified..", MessageBoxButton.YesNo);
                 if (result == MessageBoxResult.Yes)
                 {
                     SaveMenuClick(null, null);
-
-                } 
-                new MainWindow().Show();
-                this.Close();
+                }
             }
+            new MainWindow().Show();
+            this.Close();
         }
 
         private void OpenMenuClick(object sender, RoutedEventArgs e)
@@ -158,5 +152,7 @@ namespace EditorWpfApp
             }
             totalEmployeesText.Text = "Total employees: " + empListView.Items.Count;
         }
+
+
     }
 }  

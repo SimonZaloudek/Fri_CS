@@ -27,3 +27,5 @@ C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\De
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\Debug\net7.0-windows\searchWindow.baml
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\Debug\net7.0-windows\AboutDialog.baml
 C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\Debug\net7.0-windows\AboutDialog.g.cs
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\Debug\net7.0-windows\DialogAddEdit.g.cs
+C:\Users\simon\OneDrive\Programy\Programovanie\C#\DU_1_C#NET\EditorWpfApp\obj\Debug\net7.0-windows\DialogAddEdit.baml
