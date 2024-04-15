@@ -18,8 +18,7 @@ namespace ViewerWpfApp
    
     public partial class MainWindow : Window
     {
-        private string path;
-        private string fileName;
+        private string? fileName;
         private bool sourceLoaded = false;
         private EmployeeList? _employeeList = new();
         private SearchResult? _searchResult;
@@ -31,42 +30,43 @@ namespace ViewerWpfApp
 
         private void OpenButton_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Title = "Select a .json file";
-            fileDialog.Filter = ".json files | *.json";
+            OpenFileDialog fileDialog = new()
+            {
+                Title = "Select a .json file",
+                Filter = ".json files | *.json"
+            };
             bool? opened = fileDialog.ShowDialog();
             if (opened == true)
             {
-                path = fileDialog.SafeFileName;
                 fileName = fileDialog.FileName;
 
                 if (_employeeList != null)
-                    _employeeList = _employeeList.LoadFromJson(new FileInfo(path));
+                    _employeeList = EmployeeList.LoadFromJson(new FileInfo(fileName));
                 sourceLoaded = true;
-                sourceFileLoaded();
+                SourceFileLoaded();
             }
         }
 
-        private void sourceFileLoaded() 
+        private void SourceFileLoaded()
         {
             if (_employeeList != null)
-                foreach (string function in _employeeList.GetPositions()) 
+            {
+                foreach (string function in _employeeList.GetPositions())
                 {
                     FunctionsCB.Items.Add(function);
                 }
-
-            foreach (string workplace in _employeeList.GetMainWorkplaces()) 
-            {
-                WorkplaceCB.Items.Add(workplace);
+                foreach (string workplace in _employeeList.GetMainWorkplaces())
+                {
+                    WorkplaceCB.Items.Add(workplace);
+                }
             }
         }
 
-        private void employeeSearch_Click(object sender, RoutedEventArgs e)
+        private void EmployeeSearch_Click(object sender, RoutedEventArgs e)
         {
             if (sourceLoaded == false) 
             {
-                MessageBoxResult result;
-                result = MessageBox.Show(this, "No source file loaded..", "Error..", MessageBoxButton.OK);
+                _ = MessageBox.Show(this, "No source file loaded..", "Error..", MessageBoxButton.OK);
             } 
             else 
             {
@@ -83,43 +83,44 @@ namespace ViewerWpfApp
                 }
                 
                 if (_employeeList != null)
+                { 
                     _searchResult = _employeeList.Search(mainWorkplace: workplace, position: position, NameTextBox.Text);
-
-                if (_searchResult != null)
+                    
+                    empFound.Text = "Employees found: " + _searchResult.Employees.Length;
+                    
                     empListView.ItemsSource = _searchResult.Employees;
-
-                if (_searchResult != null)
-                    empFound.Text = "Employees found: " + _searchResult.Employees.Count();
+                }
             }
         }
 
-        private void reset_Click(object sender, RoutedEventArgs e)
+        private void Reset_Click(object sender, RoutedEventArgs e)
         {
             new MainWindow().Show();
             this.Close();
         }
 
-        private void exportCSV_Click(object sender, RoutedEventArgs e)
+        private void ExportCSV_Click(object sender, RoutedEventArgs e)
         {
             if (sourceLoaded == false)
             {
-                MessageBoxResult result;
-                result = MessageBox.Show(this, "No source file loaded..", "Error..", MessageBoxButton.OK);
+                _ = MessageBox.Show(this, "No source file loaded..", "Error..", MessageBoxButton.OK);
             }
             else
             {
-                SaveFileDialog saveDialog = new SaveFileDialog();
-                saveDialog.Title = "Save to CSV:";
-                saveDialog.Filter = ".csv files | *.csv";
+                SaveFileDialog saveFileDialog = new()
+                {
+                    Title = "Save to CSV:",
+                    Filter = ".csv files | *.csv",
 
-                saveDialog.FileName = "Document";
-                saveDialog.DefaultExt = ".csv";
+                    FileName = "Document",
+                    DefaultExt = ".csv"
+                };
+                SaveFileDialog saveDialog = saveFileDialog;
 
                 bool? result = saveDialog.ShowDialog();
                 if (result == true)
                 {
-                    if (_searchResult != null)
-                        _searchResult.SaveToCsv(new FileInfo(saveDialog.FileName));
+                    _searchResult?.SaveToCsv(new FileInfo(saveDialog.FileName));
                 }
             }
         }

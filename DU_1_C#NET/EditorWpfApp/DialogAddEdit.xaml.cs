@@ -15,61 +15,64 @@ using System.Windows.Shapes;
 
 namespace EditorWpfApp
 {
-    
+
     public partial class DialogAddEdit : Window
     {
-        private Employee? _employee;
-        private MainWindow _mainWindow;
-        private bool edit = true;
+        public Employee? Employee { get; set; }
+        public bool Cancel { get; set; }
 
-        public DialogAddEdit(MainWindow mw, Employee? emp = null)
+        public DialogAddEdit(Employee? emp = null)
         {
             InitializeComponent();
-            _mainWindow = mw;
+            Cancel = false;
             
-            if (emp != null && _mainWindow != null && _mainWindow.EmployeeList != null) 
+            if (emp != null) 
             {
-                _employee = emp;
-                _mainWindow.EmployeeList.Remove(emp);
-                _mainWindow.empListView.Items.Remove(emp);
+                Employee = emp;
                 FillTextBox();
             }
         }
 
         private void FillTextBox()
         {
-            if (_employee != null) { 
-                empTB.Text = _employee.Name;
-                posTB.Text = _employee.Position;
-                phoneTB.Text = _employee.Phone;
-                mailTB.Text = _employee.Email;
-                roomTB.Text = _employee.Room;
-                mainWTB.Text = _employee.MainWorkplace;
-                workTB.Text = _employee.Workplace;
+            if (Employee != null) { 
+                empTB.Text = Employee.Name;
+                posTB.Text = Employee.Position;
+                phoneTB.Text = Employee.Phone;
+                mailTB.Text = Employee.Email;
+                roomTB.Text = Employee.Room;
+                mainWTB.Text = Employee.MainWorkplace;
+                workTB.Text = Employee.Workplace;
             }
         }
 
-        private void okButtonClick(object sender, RoutedEventArgs e)
+        private void OkButtonClick(object sender, RoutedEventArgs e)
         {
-            if (_employee != null && _mainWindow != null && _mainWindow.EmployeeList != null) {
-                _employee.Name = empTB.Text;
-                _employee.Position = posTB.Text;
-                _employee.Phone = phoneTB.Text;
-                _employee.Email = mailTB.Text;
-                _employee.Room= roomTB.Text;
-                _employee.MainWorkplace = mainWTB.Text;
-                _employee.Workplace = workTB.Text;
-
-
-                _mainWindow.empListView.Items.Add(_employee);
-                _mainWindow.EmployeeList.Add(_employee);
+            if (Employee != null)
+            {
+                Employee.Name = empTB.Text;
+                Employee.Position = posTB.Text;
+                Employee.Phone = phoneTB.Text;
+                Employee.Email = mailTB.Text;
+                Employee.Room = roomTB.Text;
+                Employee.MainWorkplace = mainWTB.Text;
+                Employee.Workplace = workTB.Text;
             }
-            this.Close();
+            else 
+            {
+                if (empTB.Text == "" && posTB.Text == "" && phoneTB.Text == "" && roomTB.Text == "" && mainWTB.Text == "" && workTB.Text == "" && mailTB.Text == "")
+                    Employee = null;
+                else
+                    Employee = new Employee(empTB.Text, posTB.Text, mailTB.Text, phoneTB.Text, roomTB.Text, mainWTB.Text, workTB.Text);
+            }
+            DialogResult = true;
         }
 
-        private void cancelButtonClick(object sender, RoutedEventArgs e)
+        private void CancelButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Cancel = true;
+            DialogResult = true;
         }
+
     }
 }

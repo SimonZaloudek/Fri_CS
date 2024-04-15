@@ -75,7 +75,7 @@ public class Viewer
         switch (command)
         {
             case "--input":
-                empList = empList.LoadFromJson(new FileInfo(parameter));
+                empList = EmployeeList.LoadFromJson(new FileInfo(parameter));
                 break;
             case "--name":
                 name = parameter;

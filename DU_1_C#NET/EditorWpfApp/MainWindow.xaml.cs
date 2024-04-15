@@ -8,13 +8,10 @@ namespace EditorWpfApp
 {
     public partial class MainWindow : Window
     {
-        DispatcherTimer timer = new DispatcherTimer();
-        private string path;
-        private string fileName;
-        private bool sourceLoaded = false;
+        readonly DispatcherTimer timer = new();
+        private string? fileName;
         private bool wasChanged = false;
         private EmployeeList? _employeeList = new();
-        private SearchResult? _searchResult;
 
         public EmployeeList? EmployeeList { get => _employeeList; set => _employeeList = value; }
 
@@ -34,35 +31,64 @@ namespace EditorWpfApp
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            new DialogAddEdit(mw: this).Show();
+            DialogAddEdit dialogAddEdit = new();
+            dialogAddEdit.ShowDialog();
+            if (dialogAddEdit.Cancel == false && dialogAddEdit.Employee != null && _employeeList != null) 
+            {
+                empListView.ItemsSource = null;
+                _employeeList.Add(dialogAddEdit.Employee);
+                empListView.ItemsSource = _employeeList;
+
+                wasChanged = true;
+            }
+            dialogAddEdit.Close();
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-            new DialogAddEdit(this, (Employee)empListView.SelectedItem).Show();
+            Employee tempEmployee = (Employee)empListView.SelectedItem;
+            
+            DialogAddEdit dialogAddEdit = new((Employee)empListView.SelectedItem);
+            dialogAddEdit.ShowDialog();
+            if (dialogAddEdit.Cancel == false && dialogAddEdit.Employee != null && _employeeList != null)
+            {      
+                
+                empListView.SelectedItem = dialogAddEdit.Employee;
+                for (int i = 0; i < empListView.Items.Count; i++) 
+                {
+                    _employeeList[i] = (Employee)empListView.Items[i];
+                }
+                empListView.ItemsSource = null;
+                empListView.ItemsSource = _employeeList;
+
+                if (tempEmployee != dialogAddEdit.Employee)
+                    wasChanged = true;
+            }
+            dialogAddEdit.Close();
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             wasChanged = true;
 
-            List<Employee> itemsToRemove = new List<Employee>();
+            List<Employee> itemsForRemoval = new();
             MessageBoxResult result;
             result = MessageBox.Show(this, "Are you sure you want to remove selected employees?..", "Remove employees..", MessageBoxButton.YesNo);
             if (result == MessageBoxResult.Yes)
             {
                 foreach (Employee emp in empListView.SelectedItems)
                 {
-                    itemsToRemove.Add(emp);
+                    itemsForRemoval.Add(emp);
                 }
-                //Priamo mazat neslo, preto takyto blby "obchvat" xd
-                foreach (Employee emp in itemsToRemove)
+                foreach (Employee emp in itemsForRemoval)
                 {
-                    _employeeList.Remove(emp);
+                    _employeeList?.Remove(emp);
                 }
                 empListView.ItemsSource = null;
                 empListView.ItemsSource = _employeeList;
+                
             }
+            empListView.SelectedItems.Clear();
         }
 
         private void NewMenuClick(object sender, RoutedEventArgs e)
@@ -82,45 +108,43 @@ namespace EditorWpfApp
 
         private void OpenMenuClick(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Title = "Select a .json file";
-            fileDialog.Filter = ".json files | *.json";
+            OpenFileDialog fileDialog = new()
+            {
+                Title = "Select a .json file",
+                Filter = ".json files | *.json"
+            };
             bool? opened = fileDialog.ShowDialog();
             if (opened == true)
             {
-                path = fileDialog.SafeFileName;
                 fileName = fileDialog.FileName;
 
                 if (_employeeList != null)
-                    _employeeList = _employeeList.LoadFromJson(new FileInfo(path));
-                sourceLoaded = true;
+                    _employeeList = EmployeeList.LoadFromJson(new FileInfo(fileName));
                 empListView.ItemsSource = _employeeList;
-
-                searchButton.IsEnabled = true;
             }
         }
 
-        private void SaveMenuClick(object sender, RoutedEventArgs e)
+        private void SaveMenuClick(object? sender, RoutedEventArgs? e)
         {
-            if (sourceLoaded == false)
+            if (empListView.Items.Count < 1)
             {
-                MessageBoxResult result;
-                result = MessageBox.Show(this, "No source file loaded..", "Error..", MessageBoxButton.OK);
+                _ = MessageBox.Show(this, "No employees in the database", "Error..", MessageBoxButton.OK);
             }
             else
             {
-                SaveFileDialog saveDialog = new SaveFileDialog();
-                saveDialog.Title = "Save to CSV:";
-                saveDialog.Filter = ".csv files | *.csv";
+                SaveFileDialog saveDialog = new()
+                {
+                    Title = "Save to JSON:",
+                    Filter = ".json files | *.json",
 
-                saveDialog.FileName = "Document";
-                saveDialog.DefaultExt = ".csv";
+                    FileName = "Document",
+                    DefaultExt = ".json"
+                };
 
                 bool? result = saveDialog.ShowDialog();
-                if (result == true)
+                if (result == true && _employeeList != null)
                 {
-                    if (_searchResult != null)
-                        _searchResult.SaveToCsv(new FileInfo(saveDialog.FileName));
+                    _employeeList.SaveToJson(new FileInfo(saveDialog.FileName));
                 }
             }
         }
@@ -132,8 +156,8 @@ namespace EditorWpfApp
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-            new searchWindow(_employeeList);
-            this.Close();
+            if (_employeeList != null)
+                _ = new SearchWindow(_employeeList);
         }
 
         private void AboutMenuClick(object sender, RoutedEventArgs e)
@@ -141,7 +165,7 @@ namespace EditorWpfApp
             new AboutDialog().Show();
         }
 
-        private void Timer_Tick(object sender, EventArgs e) 
+        private void Timer_Tick(object? sender, EventArgs e) 
         {
             if (empListView.SelectedItems.Count > 0)
             {
@@ -149,6 +173,22 @@ namespace EditorWpfApp
                 editButton.IsEnabled = true;
                 editMenuButton.IsEnabled = true;
                 deleteMenuButton.IsEnabled = true;
+            }
+            else 
+            {
+                deleteButton.IsEnabled = false;
+                editButton.IsEnabled = false;
+                editMenuButton.IsEnabled = false;
+                deleteMenuButton.IsEnabled = false;
+            }
+
+            if (empListView.Items.Count > 0)
+            {
+                searchButton.IsEnabled = true;
+            }
+            else 
+            {
+                searchButton.IsEnabled = false;
             }
             totalEmployeesText.Text = "Total employees: " + empListView.Items.Count;
         }

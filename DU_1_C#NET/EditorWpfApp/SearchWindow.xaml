@@ -1,4 +1,4 @@
-﻿<Window x:Class="EditorWpfApp.searchWindow"
+﻿<Window x:Class="EditorWpfApp.SearchWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -30,8 +30,8 @@
         <TextBlock x:Name="WorkplaceTB" Text="Workplace:" FontSize="13" Margin="10,6,0,35" Grid.Row="3" HorizontalAlignment="Left" Width="125"/>
         <ComboBox Name="WorkplaceCB" Margin="10,25,10,10" Grid.Row="3"/>
 
-        <Button Name="employeeSearch" Content="Search employee" FontSize="14" Margin="10,10,0,13" Grid.Row="4" Click="employeeSearch_Click" HorizontalAlignment="Left" Width="138"/>
-        <Button Name="reset" Content="Reset" FontSize="14" Margin="162,10,0,13" Grid.Row="4" Click="reset_Click" HorizontalAlignment="Left" Width="138"/>
+        <Button Name="employeeSearch" Content="Search employee" FontSize="14" Margin="10,10,0,13" Grid.Row="4" Click="EmployeeSearch_Click" HorizontalAlignment="Left" Width="138"/>
+        <Button Name="backButton" Content="Back" FontSize="14" Margin="162,10,0,13" Grid.Row="4" Click="Back_Click" HorizontalAlignment="Left" Width="138"/>
 
 
         <ListView Grid.Row="5" Name="empListView" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="18,13,18,13">
@@ -72,7 +72,7 @@
 
 
         <TextBlock Name="empFound" Text="Employees found: 0" FontSize="16" VerticalAlignment="Top" Margin="10,23,250,0" Grid.Row="6" MinHeight="21.28"/>
-        <Button x:Name="exportCSV" Content="Export to CSV..." FontSize="15" Margin="0,19,25,32" Grid.Row="6" Click="exportCSV_Click" HorizontalAlignment="Right" Width="166"/>
+        <Button x:Name="exportCSV" Content="Export to CSV..." FontSize="15" Margin="0,19,25,32" Grid.Row="6" Click="ExportCSV_Click" HorizontalAlignment="Right" Width="166"/>
 
     </Grid>
 </Window>

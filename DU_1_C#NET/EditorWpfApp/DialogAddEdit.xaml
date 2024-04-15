@@ -41,7 +41,7 @@
         <TextBox x:Name="mainWTB" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="81,0,10,0" Width="170" />
         <TextBox x:Name="workTB" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="81,0,10,0" Width="170" />
 
-        <Button Grid.Row="7"  Content="OK" Margin="116,11,100,12" Click="okButtonClick"></Button>
-        <Button Grid.Row="7"  Content="CANCEL" Margin="205,11,10,12" Click="cancelButtonClick"/>
+        <Button Grid.Row="7"  Content="OK" Margin="116,11,100,12" Click="OkButtonClick"></Button>
+        <Button Grid.Row="7"  Content="CANCEL" Margin="205,11,10,12" Click="CancelButtonClick"/>
     </Grid>
 </Window>

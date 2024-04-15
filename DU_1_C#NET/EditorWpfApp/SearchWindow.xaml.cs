@@ -17,47 +17,44 @@ using System.Windows.Shapes;
 
 namespace EditorWpfApp
 {
-    /// <summary>
-    /// Interaction logic for searchWindow.xaml
-    /// </summary>
-    public partial class searchWindow : Window
+   
+    public partial class SearchWindow : Window
     {
-        private string path;
-        private string fileName;
-        private bool sourceLoaded = false;
-        private EmployeeList? _employeeList;
+        private readonly bool sourceLoaded;
+        private readonly EmployeeList? _employeeList;
         private SearchResult? _searchResult;
 
-        public searchWindow(EmployeeList list)
+        public SearchWindow(EmployeeList list)
         {
             InitializeComponent();
             this.Show();
 
             _employeeList =list;
             sourceLoaded = true;
-            sourceFileLoaded();
+            SourceFileLoaded();
         }
 
-        private void sourceFileLoaded()
+        private void SourceFileLoaded()
         {
             if (_employeeList != null)
+            {
                 foreach (string function in _employeeList.GetPositions())
                 {
                     FunctionsCB.Items.Add(function);
                 }
 
-            foreach (string workplace in _employeeList.GetMainWorkplaces())
-            {
-                WorkplaceCB.Items.Add(workplace);
+                foreach (string workplace in _employeeList.GetMainWorkplaces())
+                {
+                    WorkplaceCB.Items.Add(workplace);
+                }
             }
         }
 
-        private void employeeSearch_Click(object sender, RoutedEventArgs e)
+        private void EmployeeSearch_Click(object sender, RoutedEventArgs e)
         {
             if (sourceLoaded == false)
             {
-                MessageBoxResult result;
-                result = MessageBox.Show(this, "No source file loaded..", "Error..", MessageBoxButton.OK);
+                _ = MessageBox.Show(this, "No source file loaded..", "Error..", MessageBoxButton.OK);
             }
             else
             {
@@ -80,37 +77,36 @@ namespace EditorWpfApp
                     empListView.ItemsSource = _searchResult.Employees;
 
                 if (_searchResult != null)
-                    empFound.Text = "Employees found: " + _searchResult.Employees.Count();
+                    empFound.Text = "Employees found: " + _searchResult.Employees.Length;
             }
         }
 
-        private void reset_Click(object sender, RoutedEventArgs e)
+        private void Back_Click(object sender, RoutedEventArgs e)
         {
-            new searchWindow(_employeeList).Show();
             this.Close();
         }
 
-        private void exportCSV_Click(object sender, RoutedEventArgs e)
+        private void ExportCSV_Click(object sender, RoutedEventArgs e)
         {
             if (sourceLoaded == false)
             {
-                MessageBoxResult result;
-                result = MessageBox.Show(this, "No source file loaded..", "Error..", MessageBoxButton.OK);
+                _ = MessageBox.Show(this, "No source file loaded..", "Error..", MessageBoxButton.OK);
             }
             else
             {
-                SaveFileDialog saveDialog = new SaveFileDialog();
-                saveDialog.Title = "Save to CSV:";
-                saveDialog.Filter = ".csv files | *.csv";
+                SaveFileDialog saveDialog = new()
+                {
+                    Title = "Save to CSV:",
+                    Filter = ".csv files | *.csv",
 
-                saveDialog.FileName = "Document";
-                saveDialog.DefaultExt = ".csv";
+                    FileName = "Document",
+                    DefaultExt = ".csv"
+                };
 
                 bool? result = saveDialog.ShowDialog();
                 if (result == true)
                 {
-                    if (_searchResult != null)
-                        _searchResult.SaveToCsv(new FileInfo(saveDialog.FileName));
+                    _searchResult?.SaveToCsv(new FileInfo(saveDialog.FileName));
                 }
             }
         }

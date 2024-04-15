@@ -12,13 +12,22 @@ namespace AdressBook.CommonLibrary;
 
 public class EmployeeList : ObservableCollection<Employee>
 { 
-    public EmployeeList? LoadFromJson(FileInfo jsonFile)
+    public static EmployeeList? LoadFromJson(FileInfo jsonFile)
     {
-        StreamReader reader = new(jsonFile.FullName);
-        string json = reader.ReadToEnd();
+        try
+        {
+            StreamReader reader = new(jsonFile.FullName);
+            string json = reader.ReadToEnd();
+            
+            EmployeeList? list = JsonSerializer.Deserialize<EmployeeList>(json);
 
-        EmployeeList? list = JsonSerializer.Deserialize<EmployeeList>(json);
-        return list;
+            return list;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("An error occured: " + ex.Message);
+            return null;
+        }
     }
 
     public void SaveToJson(FileInfo jsonFile)
@@ -28,9 +37,8 @@ public class EmployeeList : ObservableCollection<Employee>
     }
 
     public IEnumerable<string> GetPositions() 
-    {
-        //return this.Select(Employee => Employee.Position).Distinct();    
-        List<string> positions = new List<string>();
+    {    
+        List<string> positions = new();
 
         foreach (Employee employee in this)
         {
@@ -42,17 +50,18 @@ public class EmployeeList : ObservableCollection<Employee>
         positions.Sort();
         return positions;
     }
-
+    //Daval som do ChatGPT aby som nasiel riesenie cez Enumerable, ale pouzil som svoje OG.
     public IEnumerable<string> GetMainWorkplaces()
     {
-        List<string> mainWorkplaces = new List<string>();
+        List<string> mainWorkplaces = new();
 
         foreach(Employee employee in this) 
         {
-            if (!mainWorkplaces.Contains(employee.MainWorkplace)) 
-            {
-                mainWorkplaces.Add(employee.MainWorkplace);
-            }
+            if (employee.MainWorkplace != null)
+                if (!mainWorkplaces.Contains(employee.MainWorkplace)) 
+                {
+                    mainWorkplaces.Add(employee.MainWorkplace);
+                }
         }
         
         mainWorkplaces.Sort();
@@ -61,7 +70,8 @@ public class EmployeeList : ObservableCollection<Employee>
 
     public SearchResult Search(string? mainWorkplace = null, string? position = null, string? name = null)
     {
-        List<Employee> employees = new List<Employee>();
+        //ChatGPT mi pomohol s rozlisovanim malych/velkych pismen, okrem toho vlastna metoda
+        List<Employee> employees = new();
         StringComparison comparison = StringComparison.OrdinalIgnoreCase;
 
         foreach (Employee emp in this)
@@ -70,11 +80,11 @@ public class EmployeeList : ObservableCollection<Employee>
             bool matchesPosition = false;
             bool matchesName = false;
 
-            if (mainWorkplace == null || (emp.MainWorkplace != null && emp.MainWorkplace.IndexOf(mainWorkplace, comparison) >= 0))
+            if (mainWorkplace == null || (emp.MainWorkplace != null && emp.MainWorkplace.Contains(mainWorkplace, comparison)))
                 matchesMainWorkplace = true;
-            if (position == null || (emp.Position != null && emp.Position.IndexOf(position, comparison) >= 0))
+            if (position == null || (emp.Position != null && emp.Position.Contains(position, comparison)))
                 matchesPosition = true;
-            if (name == null || (emp.Name != null && emp.Name.IndexOf(name, comparison) >= 0))
+            if (name == null || (emp.Name != null && emp.Name.Contains(name, comparison)))
                 matchesName = true;
 
             if (matchesMainWorkplace && matchesPosition && matchesName)

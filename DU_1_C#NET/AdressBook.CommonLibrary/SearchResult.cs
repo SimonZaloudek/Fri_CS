@@ -22,20 +22,20 @@ public class SearchResult
     {
     try
     {
-        var csv = new StringBuilder();
+        var csvSubor = new StringBuilder();
 
         foreach (var employee in Employees) 
         {
-            csv.AppendLine("Name" + delimiter + employee.Name);
-            csv.AppendLine("MainWorkplace" + delimiter + employee.MainWorkplace);
-            csv.AppendLine("Workplace" + delimiter + employee.Workplace);
-            csv.AppendLine("Room" + delimiter + employee.Room);
-            csv.AppendLine("Phone" + delimiter + employee.Phone);
-            csv.AppendLine("Email" + delimiter + employee.Email);
-            csv.AppendLine("Position" + delimiter + employee.Position);
+            csvSubor.AppendLine("Name" + delimiter + employee.Name);
+            csvSubor.AppendLine("MainWorkplace" + delimiter + employee.MainWorkplace);
+            csvSubor.AppendLine("Workplace" + delimiter + employee.Workplace);
+            csvSubor.AppendLine("Room" + delimiter + employee.Room);
+            csvSubor.AppendLine("Phone" + delimiter + employee.Phone);
+            csvSubor.AppendLine("Email" + delimiter + employee.Email);
+            csvSubor.AppendLine("Position" + delimiter + employee.Position);
         }
 
-        File.AppendAllText(csvFile.FullName, csv.ToString());
+        File.AppendAllText(csvFile.FullName, csvSubor.ToString());
     }
     catch (Exception ex)
     {
